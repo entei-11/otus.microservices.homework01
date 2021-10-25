@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Microservices.Homework01.WebHost", "Otus.Microservices.Homework01.WebHost\Otus.Microservices.Homework01.WebHost.csproj", "{924DEE02-7A52-4E53-A4DF-554F512B9C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Microservices.Homework01.WebApi.Host", "Otus.Microservices.Homework01.WebApi.Host\Otus.Microservices.Homework01.WebApi.Host.csproj", "{924DEE02-7A52-4E53-A4DF-554F512B9C40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44CEC12B-91D6-4F63-9015-C9B4646C3B5A}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,9 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Microservices.Homework01.WebApi", "Otus.Microservices.Homework01.WebApi\Otus.Microservices.Homework01.WebApi.csproj", "{A4934380-0393-492A-9944-B0CED2A6DEC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Microservices.Homework01.WebApi", "Otus.Microservices.Homework01.WebApi\Otus.Microservices.Homework01.WebApi.csproj", "{A4934380-0393-492A-9944-B0CED2A6DEC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Microservices.Homework01.CodeAnalyzers", "Otus.Microservices.Homework01.CodeAnalyzers\Otus.Microservices.Homework01.CodeAnalyzers.csproj", "{113E5B0C-5A65-4C83-AE7E-088727AF0628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Microservices.Homework01.CodeAnalyzers", "Otus.Microservices.Homework01.CodeAnalyzers\Otus.Microservices.Homework01.CodeAnalyzers.csproj", "{113E5B0C-5A65-4C83-AE7E-088727AF0628}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Microservices.Homework01.K8s", "Otus.Microservices.Homework01.K8s\Otus.Microservices.Homework01.K8s.csproj", "{151A6792-16FA-4326-89B1-99F1DC9D1E16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{113E5B0C-5A65-4C83-AE7E-088727AF0628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{113E5B0C-5A65-4C83-AE7E-088727AF0628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{113E5B0C-5A65-4C83-AE7E-088727AF0628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{151A6792-16FA-4326-89B1-99F1DC9D1E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151A6792-16FA-4326-89B1-99F1DC9D1E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151A6792-16FA-4326-89B1-99F1DC9D1E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151A6792-16FA-4326-89B1-99F1DC9D1E16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

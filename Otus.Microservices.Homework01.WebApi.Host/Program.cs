@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Otus.Microservices.Homework01
+namespace Otus.Microservices.Homework01.WebApi.Host
 {
     public static class Program
     {
@@ -12,10 +12,10 @@ namespace Otus.Microservices.Homework01
 
         public static IHostBuilder CreateHostBuilder( string[] args )
         {
-            return Host.CreateDefaultBuilder( args )
+            return Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder( args )
                 .ConfigureWebHostDefaults( webBuilder =>
                 {
-                    webBuilder.UseStartup<WebApi.Startup>();
+                    webBuilder.UseStartup<Startup>();
                 } );
         }
     }

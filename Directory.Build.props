@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
-    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)/StayStore.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)/Analyzers.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
-    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)/StayStore.Test.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)/Analyzers.Test.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 </Project>

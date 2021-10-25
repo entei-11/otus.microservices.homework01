@@ -5,6 +5,7 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <ContainerDevelopmentMode>Regular</ContainerDevelopmentMode>
     <!--ContainerDevelopmentMode>Regular</ContainerDevelopmentMode-->
+    <DockerfileTag>otus.microservices.homework01.webapi</DockerfileTag>
   </PropertyGroup>
 
   <ItemGroup>

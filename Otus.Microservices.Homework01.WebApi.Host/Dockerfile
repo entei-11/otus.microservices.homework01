@@ -10,16 +10,16 @@ EXPOSE 8000
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Otus.Microservices.Homework01.WebHost/Otus.Microservices.Homework01.WebHost.csproj", "Otus.Microservices.Homework01.WebHost/"]
-RUN dotnet restore "Otus.Microservices.Homework01.WebHost/Otus.Microservices.Homework01.WebHost.csproj"
+COPY ["Otus.Microservices.Homework01.WebApi.Host/Otus.Microservices.Homework01.WebApi.Host.csproj", "Otus.Microservices.Homework01.WebApi.Host/"]
+RUN dotnet restore "Otus.Microservices.Homework01.WebApi.Host/Otus.Microservices.Homework01.WebApi.Host.csproj"
 COPY . .
-WORKDIR "/src/Otus.Microservices.Homework01.WebHost"
-RUN dotnet build "Otus.Microservices.Homework01.WebHost.csproj" -c Release -o /app/build
+WORKDIR "/src/Otus.Microservices.Homework01.WebApi.Host"
+RUN dotnet build "Otus.Microservices.Homework01.WebApi.Host.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Otus.Microservices.Homework01.WebHost.csproj" -c Release -o /app/publish
+RUN dotnet publish "Otus.Microservices.Homework01.WebApi.Host.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Otus.Microservices.Homework01.WebHost.dll"]
+ENTRYPOINT ["dotnet", "Otus.Microservices.Homework01.WebApi.Host.dll"]

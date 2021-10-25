@@ -27,9 +27,10 @@
 
 1. Минимальный сервис отвечает на 8000 порту (на самом деле на любом, это можно настроить через переменную окружения ASPNETCORE_URLS)
 
-2. Образ локально собирается через студию или команду в рабочей папке проекта с докер файлом (Otus.Microservices.Homework01.WebHost):
+2. Образ локально собирается через студию или команду в рабочей папке проекта с докер файлом (Otus.Microservices.Homework01.WebApi.Host):
 ```bash
-./Otus.Microservices.Homework01.WebHost$ docker build -f Dockerfile  ..
+cd ./Otus.Microservices.Homework01.WebApi.Host
+docker build -f Dockerfile  ..
 ```
 
-3. Образ опубликован в [entei11/otusmicroserviceshomework01webhost:latest](https://registry.hub.docker.com/r/entei11/otusmicroserviceshomework01webhost/tags)
+3. Образ опубликован в [entei11/otus.microservices.homework01.webapi:latest](https://registry.hub.docker.com/r/entei11/otus.microservices.homework01.webapi/tags)

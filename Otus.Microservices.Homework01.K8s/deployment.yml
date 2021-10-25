@@ -1,0 +1,27 @@
+﻿apiVersion: v1
+kind: Namespace
+metadata:
+  name: otus-microservices-homework01
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi-app
+  namespace: otus-microservices-homework01
+  labels:
+    apps: homework01
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: homework01.webapi
+  template:
+    metadata:
+      labels:
+        app: homework01.webapi
+    spec:
+      containers:
+      - name: homework01-webapi
+        image: entei11/otus.microservices.homework01.webapi:latest
+        ports:
+        - containerPort: 8000

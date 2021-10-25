@@ -10,9 +10,9 @@
     "ListAllProjects": false,
 
     "MultiProjectConfigurations": {
-        "Homework01.WebHost": {
+        "WebApi.Host": {
             "Projects": {
-                "Otus.Microservices.Homework01.WebHost": {}
+                "Otus.Microservices.Homework01.WebApi.Host": {}
             }
         }
     },

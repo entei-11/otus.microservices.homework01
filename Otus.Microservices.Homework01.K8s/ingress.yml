@@ -1,0 +1,21 @@
+﻿apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webapi-ingress
+  namespace: otus-microservices-homework01
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  labels:
+    apps: homework01
+spec:
+  rules:
+  - host: arch.homework
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: homework01-webapi
+            port:
+              number: 8801

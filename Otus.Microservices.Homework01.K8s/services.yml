@@ -1,0 +1,14 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: webapi-service
+  namespace: otus-microservices-homework01
+  labels:
+    apps: homework01
+spec:
+  selector:
+    app: homework01.webapi
+  ports:
+    - port: 8801
+      targetPort: 8000
+  type: LoadBalancer
