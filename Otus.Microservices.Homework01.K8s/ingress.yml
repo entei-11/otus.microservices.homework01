@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: webapi-ingress
   namespace: otus-microservices-homework01
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
   labels:
     apps: homework01
 spec:
@@ -16,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: homework01-webapi
+            name: webapi-service
             port:
               number: 8801
