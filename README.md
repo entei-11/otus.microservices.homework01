@@ -18,10 +18,8 @@
 - В Deployment могут быть указаны Liveness, Readiness пробы.
 - Количество реплик должно быть не меньше 2.
 - Image контейнера должен быть указан с Dockerhub.
-- Хост в ингрессе должен быть arch.homework. В итоге после применения манифестов GET запрос на http://arch.homework/health должен отдавать {“status”: “OK”}.
-
-5. На выходе предоставить:
-- ссылку на github c манифестами. Манифесты должны лежать в одной директории, так чтобы можно было их все применить одной командой kubectl apply -f .
+- Хост в ингрессе должен быть arch.homework. В итоге после применения манифестов GET запрос на http://arch.homework/health должен отдавать `{"status": "OK"}`.
+- На выходе предоставить ссылку на github c манифестами. Манифесты должны лежать в одной директории, так чтобы можно было их все применить одной командой `kubectl apply -f .`
 
 ### Результат
 
@@ -34,3 +32,5 @@ docker build -f Dockerfile  ..
 ```
 
 3. Образ опубликован в [entei11/otus.microservices.homework01.webapi:latest](https://registry.hub.docker.com/r/entei11/otus.microservices.homework01.webapi/tags)
+
+4. Манифесты для деплоя сервиса в k8s лежат в [Otus.Microservices.Homework01.K8s](./Otus.Microservices.Homework01.K8s)
