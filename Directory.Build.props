@@ -1,0 +1,17 @@
+﻿<Project>
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)/StayStore.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)/StayStore.Test.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+</Project>
